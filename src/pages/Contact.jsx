@@ -10,8 +10,13 @@ export default function Contact() {
     e.preventDefault()
     setStatus('Sending...')
     try {
-      // Placeholder submit — in a real setup this would POST to the backend
-      await new Promise(r => setTimeout(r, 800))
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)
+      })
+      if (!res.ok) throw new Error('Network response was not ok')
+      const data = await res.json()
       setStatus('Thanks! We will get back to you shortly.')
       setForm({ name: '', email: '', message: '' })
     } catch (e) {
