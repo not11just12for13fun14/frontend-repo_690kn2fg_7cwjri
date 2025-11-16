@@ -7,10 +7,10 @@ export default function Navbar() {
 
   const navItem = (
     <div className="flex flex-col md:flex-row md:items-center gap-6 text-sm font-medium">
-      <NavLink to="/" onClick={() => setOpen(false)} className={({isActive})=>`hover:text-blue-700 ${isActive?'text-blue-700':'text-gray-700'}`}>Home</NavLink>
-      <NavLink to="/services" onClick={() => setOpen(false)} className={({isActive})=>`hover:text-blue-700 ${isActive?'text-blue-700':'text-gray-700'}`}>Services</NavLink>
-      <NavLink to="/about" onClick={() => setOpen(false)} className={({isActive})=>`hover:text-blue-700 ${isActive?'text-blue-700':'text-gray-700'}`}>About</NavLink>
-      <NavLink to="/contact" onClick={() => setOpen(false)} className={({isActive})=>`hover:text-blue-700 ${isActive?'text-blue-700':'text-gray-700'}`}>Contact</NavLink>
+      <NavLink to="/" onClick={() => setOpen(false)} className={({isActive})=>`hover:text-blue-700 ${isActive?'text-blue-700':'text-gray-700'}`}>Inicio</NavLink>
+      <NavLink to="/services" onClick={() => setOpen(false)} className={({isActive})=>`hover:text-blue-700 ${isActive?'text-blue-700':'text-gray-700'}`}>Servicios</NavLink>
+      <NavLink to="/about" onClick={() => setOpen(false)} className={({isActive})=>`hover:text-blue-700 ${isActive?'text-blue-700':'text-gray-700'}`}>Sobre nosotros</NavLink>
+      <NavLink to="/contact" onClick={() => setOpen(false)} className={({isActive})=>`hover:text-blue-700 ${isActive?'text-blue-700':'text-gray-700'}`}>Contacto</NavLink>
     </div>
   )
 
@@ -26,7 +26,7 @@ export default function Navbar() {
           <nav className="hidden md:block">{navItem}</nav>
 
           <div className="md:hidden">
-            <button aria-label="Open menu" onClick={() => setOpen(!open)} className="p-2 rounded-md border border-gray-200">
+            <button aria-label="Abrir menú" onClick={() => setOpen(!open)} className="p-2 rounded-md border border-gray-200">
               <Menu className="h-5 w-5" />
             </button>
           </div>
